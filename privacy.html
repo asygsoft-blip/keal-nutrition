@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Keal</title>
+<meta name="description" content="Politique de confidentialité de l'application Keal : données collectées, usage, partenaires techniques et droits RGPD.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="brand">
+    <span class="brand-mark" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 1024 1024">
+        <rect x="305" y="300" width="108" height="424" rx="54" fill="#fff"/>
+        <path d="M 359 512 L 665 312" stroke="#fff" stroke-width="108" stroke-linecap="round"/>
+        <path d="M 359 512 L 665 712" stroke="#fff" stroke-width="108" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand-name">Keal</span>
+  </a>
+  <nav class="header-nav">
+    <a href="privacy.html" class="active">Confidentialité</a>
+    <a href="delete-account.html">Supprimer mon compte</a>
+  </nav>
+</header>
+
+<main>
+  <span class="eyebrow">Légal</span>
+  <h1 class="page-title">Politique de confidentialité</h1>
+  <p class="lede">Keal est une application de suivi nutritionnel. Cette page explique simplement quelles données nous collectons, pourquoi, et comment vous gardez le contrôle.</p>
+  <p class="updated">Dernière mise à jour : juillet 2026</p>
+
+  <nav class="toc" aria-label="Sommaire">
+    <a href="#donnees">Données collectées</a>
+    <a href="#usage">Utilisation</a>
+    <a href="#partenaires">Partenaires techniques</a>
+    <a href="#conservation">Conservation</a>
+    <a href="#droits">Vos droits</a>
+    <a href="#securite">Sécurité</a>
+    <a href="#mineurs">Mineurs</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="block" id="donnees">
+    <h2>1. Données que nous collectons</h2>
+    <p>Keal collecte uniquement les données nécessaires au fonctionnement de l'application :</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Catégorie</th><th>Exemples</th><th>Obligatoire ?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Compte</td><td>E-mail, prénom, mot de passe (ou identifiant Google)</td><td>Si compte créé</td></tr>
+        <tr><td>Santé &amp; profil</td><td>Âge, sexe, taille, poids, objectif de poids, niveau d'activité</td><td>Oui</td></tr>
+        <tr><td>Repas</td><td>Description texte, enregistrement vocal, photo de repas, calories estimées</td><td>Selon usage</td></tr>
+        <tr><td>Suivi</td><td>Historique de poids, historique de repas, interactions avec le Coach IA</td><td>Générée par l'usage</td></tr>
+        <tr><td>Achat</td><td>Statut d'abonnement Premium (aucune donnée bancaire ne transite par Keal)</td><td>Si abonnement</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13.5px;color:var(--ink-light)">Vous pouvez utiliser Keal sans créer de compte (mode invité). Dans ce cas, vos données restent liées à votre appareil et ne sont pas rattachées à une identité.</p>
+  </section>
+
+  <section class="block" id="usage">
+    <h2>2. Pourquoi nous les utilisons</h2>
+    <ul>
+      <li>Calculer votre objectif calorique et suivre votre progression</li>
+      <li>Analyser vos repas (texte, voix, photo) grâce à des modèles d'intelligence artificielle</li>
+      <li>Générer les bilans et conseils personnalisés du Coach IA</li>
+      <li>Gérer votre compte, votre connexion et votre abonnement</li>
+      <li>Vous envoyer des notifications liées à votre suivi (rappels, bilans) — désactivables à tout moment</li>
+    </ul>
+    <div class="callout">
+      Keal <strong>n'utilise jamais vos données à des fins publicitaires</strong> et ne les revend à aucun tiers.
+    </div>
+  </section>
+
+  <section class="block" id="partenaires">
+    <h2>3. Partenaires techniques (sous-traitants)</h2>
+    <p>Pour fonctionner, Keal s'appuie sur des prestataires techniques qui traitent certaines données en notre nom, sous notre responsabilité, uniquement pour exécuter le service :</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Prestataire</th><th>Rôle</th><th>Données concernées</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Supabase</td><td>Hébergement du compte et de la base de données</td><td>Toutes les données de compte et de suivi</td></tr>
+        <tr><td>Groq</td><td>Analyse IA des repas (texte) et transcription vocale</td><td>Texte des repas, enregistrements audio</td></tr>
+        <tr><td>Google (Gemini)</td><td>Analyse IA des photos de repas</td><td>Photos de repas</td></tr>
+        <tr><td>RevenueCat</td><td>Gestion des abonnements</td><td>Statut d'abonnement (aucune donnée bancaire)</td></tr>
+        <tr><td>Google Play / App Store</td><td>Traitement des paiements</td><td>Données de paiement (jamais transmises à Keal)</td></tr>
+      </tbody>
+    </table>
+    <p>Ces prestataires n'utilisent vos données que pour exécuter le service demandé et ne sont pas autorisés à les exploiter à d'autres fins.</p>
+  </section>
+
+  <section class="block" id="conservation">
+    <h2>4. Durée de conservation</h2>
+    <p>Vos données sont conservées tant que votre compte est actif. En cas de suppression de compte, elles sont définitivement effacées sous un délai maximal de 30 jours. Voir la page <a href="delete-account.html">suppression de compte</a> pour la procédure complète.</p>
+  </section>
+
+  <section class="block" id="droits">
+    <h2>5. Vos droits (RGPD)</h2>
+    <p>Conformément au Règlement Général sur la Protection des Données, vous disposez des droits suivants sur vos données personnelles :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> — obtenir une copie de vos données</li>
+      <li><strong>Droit de rectification</strong> — corriger des données inexactes (directement modifiable dans l'app, section Profil)</li>
+      <li><strong>Droit à l'effacement</strong> — supprimer votre compte et vos données (voir <a href="delete-account.html">ici</a>)</li>
+      <li><strong>Droit à la portabilité</strong> — récupérer vos données dans un format exploitable</li>
+      <li><strong>Droit d'opposition</strong> — vous opposer à un traitement de vos données</li>
+    </ul>
+    <p>Pour exercer l'un de ces droits, contactez-nous à <a href="mailto:asyg.soft@gmail.com">asyg.soft@gmail.com</a>. Vous pouvez également introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p>
+  </section>
+
+  <section class="block" id="securite">
+    <h2>6. Sécurité</h2>
+    <p>Toutes les communications entre l'application Keal et nos serveurs sont chiffrées (HTTPS/TLS). L'accès à vos données est strictement limité à votre compte grâce à des règles de sécurité appliquées au niveau de la base de données (chaque utilisateur ne peut accéder qu'à ses propres données).</p>
+  </section>
+
+  <section class="block" id="mineurs">
+    <h2>7. Utilisateurs mineurs</h2>
+    <p>Keal n'est pas destiné aux enfants de moins de 16 ans. Nous ne collectons pas sciemment de données concernant des mineurs de moins de 16 ans sans le consentement d'un titulaire de l'autorité parentale.</p>
+  </section>
+
+  <section class="block" id="contact">
+    <h2>8. Contact</h2>
+    <p>Pour toute question relative à cette politique de confidentialité ou à vos données personnelles :</p>
+    <a href="mailto:asyg.soft@gmail.com" class="mail-cta">✉️ asyg.soft@gmail.com</a>
+    <p style="font-size:13px;color:var(--ink-light);margin-top:20px">Cette politique peut être mise à jour ponctuellement. La date de dernière modification est indiquée en haut de cette page.</p>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 Keal — Suivi nutritionnel intelligent</span>
+  <span><a href="delete-account.html">Supprimer mon compte</a></span>
+</footer>
+
+</body>
+</html>

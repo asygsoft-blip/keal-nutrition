@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keal — Redirection</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #FAFAF8;
+    color: #1B1B1B;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 32px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .logo {
+    color: #2D6A4F;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+  }
+  h1 { font-size: 19px; margin: 0 0 12px; }
+  p { font-size: 15px; color: #555; line-height: 1.6; margin: 0 0 20px; }
+  .btn {
+    display: block;
+    background: #2D6A4F;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 24px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  .warn {
+    background: #FFF3E0;
+    border-left: 4px solid #F4A261;
+    border-radius: 8px;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+    color: #1B1B1B;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="logo">⚡ KEAL</div>
+
+  <div id="mobile" style="display:none">
+    <h1>Ouverture de Keal…</h1>
+    <p>Si l'application ne s'ouvre pas, utilise le bouton ci-dessous.</p>
+    <a class="btn" id="open-app" href="#">Ouvrir l'application</a>
+  </div>
+
+  <div id="desktop" style="display:none">
+    <h1>À ouvrir depuis ton téléphone</h1>
+    <p>Keal est une application mobile : ce lien doit être ouvert sur l'appareil où l'app est installée.</p>
+    <div class="warn">
+      ⚠️ Ce lien vient d'être utilisé et n'est plus valide.
+      Depuis ton téléphone, ouvre Keal et refais une demande — tu recevras un nouveau lien.
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  // Supabase transmet les jetons dans le FRAGMENT d'URL (#access_token=…).
+  // Il n'est jamais envoyé au serveur : seul ce script peut le lire et
+  // le faire suivre à l'application.
+  var hash = window.location.hash || "";
+  var deepLink = "keal://auth-callback" + hash;
+
+  var ua = navigator.userAgent || "";
+  var isMobile = /Android|iPhone|iPad|iPod/i.test(ua);
+
+  if (isMobile) {
+    document.getElementById("mobile").style.display = "block";
+    document.getElementById("open-app").setAttribute("href", deepLink);
+    setTimeout(function () {
+      window.location.href = deepLink;
+    }, 300);
+  } else {
+    // Sur ordinateur, impossible d'ouvrir l'app. Et comme le lien de
+    // vérification Supabase a déjà été consommé en arrivant ici, il
+    // faut en demander un nouveau depuis le téléphone.
+    document.getElementById("desktop").style.display = "block";
+  }
+})();
+</script>
+
+</body>
+</html>
